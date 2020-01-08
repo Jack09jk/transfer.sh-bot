@@ -41,12 +41,21 @@ async def send_to_transfersh_async(file, message):
     file_name = os.path.basename(file)
 
     print("\nSending file: {} (size of the file: {})".format(file_name, size_of_file))
-    url = 'https://transfer.sh/'
+    #url = 'https://transfer.sh/'
+    
+    #with open(file, 'rb') as f:
+        #async with aiohttp.ClientSession() as session:
+            #async with session.post(url, data={ file_name : f}) as response:
+                #download_link =  await response.text()
+
+url = "https://api.anonymousfiles.io/"
     
     with open(file, 'rb') as f:
         async with aiohttp.ClientSession() as session:
-            async with session.post(url, data={ file_name : f}) as response:
-                download_link =  await response.text()
+            async with session.post(url, data={ 'file' : f}) as response:
+              data =  await response.text()
+                download_link = json.loads(data)['url']
+          
                         
     print("Link to download file(will be saved till {}):\n{}".format(final_date, download_link))
     return download_link, final_date, size_of_file
