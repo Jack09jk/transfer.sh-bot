@@ -7,7 +7,7 @@ import datetime
 import aiohttp
 import asyncio
 
-api_id = ("API ID")
+api_id = int("API ID")
 api_hash = "API HASH"
 bot_token = "BOT TOKEN"
 
