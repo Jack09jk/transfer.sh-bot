@@ -10,9 +10,9 @@ import json
 # api_hash = "API HASH"
 # bot_token = "BOT TOKEN"
 
-api_id = 826988
-api_hash = "01729890ea7332c9b934c392300e403a"
-bot_token = '885928042:AAGxwn3e_-_qMJRPF-PzrVKeLwgZdpZrIz8'
+api_id = 1023440
+api_hash = "298cab91dea8a2250ff733ed84b8a494"
+bot_token = '939080410:AAGUSgktw9xYXeKWZfzAeu8VKd9zgOs1fh0'
 
 download_path = "Downloads/"
 
